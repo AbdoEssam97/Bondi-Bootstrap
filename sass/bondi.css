@@ -1,0 +1,136 @@
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.main-btn {
+  background-color: #ff3150;
+  color: #ffc400;
+  padding: 5px 25px;
+}
+.main-btn:hover {
+  color: #fff;
+  background-color: #19283f;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  background-color: #33d1cc;
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*start header*/
+nav.navbar {
+  background-color: #19283f;
+}
+
+.navbar .nav-link {
+  color: #fff;
+}
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #33d1cc !important;
+}
+
+.navbar .dropdown-menu .dropdown-item.active, .navbar .dropdown-menu .dropdown-item:focus,
+.navbar .dropdown-menu .dropdown-item :hover {
+  color: #33d1cc !important;
+  background-color: #eff7fa;
+}
+
+.navbar .navbar-toggler {
+  color: #fff !important;
+  font-size: 28px;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded=true] {
+  box-shadow: none;
+  border-color: #33d1cc;
+}
+
+/*end header*/
+/*start landing*/
+.landing {
+  background-color: #19283f;
+  min-height: calc(100vh - 68px);
+}
+
+/*end landing*/
+/*start features*/
+.features .main-title svg {
+  color: #ffc400;
+}
+
+.features .row .selections .feat .call-icons {
+  height: 200px;
+}
+.features .row .selections .feat .call-icons svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .row .selections .feat .call-icons .pen {
+  color: #33d1cc;
+}
+.features .row .selections .feat .call-icons .icon {
+  font-size: 12rem;
+  color: #eff7fa;
+}
+
+/*end features*/
+/*srart our-works*/
+.our-works {
+  background-color: #eff7fa;
+}
+.our-works .main-title svg {
+  color: #ffc400;
+}
+.our-works .container ul .active {
+  background-color: #ff3150;
+  color: #ffc400;
+}
+.our-works li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-works li:not(.active):hover {
+  color: #ff3150;
+}
+.our-works .container .selections .box {
+  overflow: hidden;
+}
+.our-works .container .selections .box::before {
+  content: attr(data-work);
+  @i;
+}
+.our-works .container .selections .box:hover::before {
+  transform: translateX(0);
+}
+
+/*end our-work*/
+/*start stuff*/
+.stuff .container .main-title svg {
+  color: #ffc400;
+}
+.stuff .container .description {
+  max-width: 500px;
+}
+
+/*end stuff*/
+/*start team */
+.team {
+  background-color: #eff7fa;
+}
+.team .text h2 {
+  color: #ffc400;
+}
+.team .row .image h4 {
+  background-color: #33d1cc;
+}
+
+/*end team *//*# sourceMappingURL=bondi.css.map */

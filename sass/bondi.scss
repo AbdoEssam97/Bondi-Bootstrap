@@ -1,0 +1,183 @@
+@use "./colors/root-colors" as *;
+@import "./mixin";
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+.main-btn {
+  background-color: $red-color;
+  color: $yello-color;
+  padding: 5px 25px;
+  &:hover {
+    color: $light-color;
+    background-color: $dark-color;
+  }
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  background-color: $green-color;
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: $dark-color;
+  box-shadow: 5px rgba(0, 0, 0, 0.861);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $green-color;
+  border-radius: 15px;
+  &:hover {
+    background-color: $light-color;
+  }
+}
+::-webkit-scrollbar-corner {
+  background-color: $dark-color;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: $dark-color;
+}
+::-webkit-scrollbar-button {
+  background-color: $red-color;
+  height: 5px;
+}
+/*start header*/
+nav.navbar {
+  background-color: $dark-color;
+}
+.navbar .nav-link {
+  color: $light-color;
+  &.active,
+  &:focus,
+  &:hover {
+    color: $green-color !important;
+  }
+}
+.navbar .dropdown-menu .dropdown-item {
+  &.active,
+  &:focus,
+  :hover {
+    color: $green-color !important;
+    background-color: $section-color;
+  }
+}
+.navbar .navbar-toggler {
+  color: $light-color !important;
+  font-size: 28px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  box-shadow: none;
+  border-color: $green-color;
+}
+/*end header*/
+/*start landing*/
+.landing {
+  background-color: $dark-color;
+  min-height: calc(100vh - 68px);
+}
+/*end landing*/
+/*start features*/
+.features .main-title svg {
+  color: $yello-color;
+}
+.features .row .selections .feat .call-icons {
+  height: 200px;
+  svg {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pen {
+    color: $green-color;
+  }
+  .icon {
+    font-size: 12rem;
+    color: $section-color;
+  }
+}
+/*end features*/
+/*srart our-works*/
+.our-works {
+  .main-title svg {
+    color: $yello-color;
+  }
+  background-color: $section-color;
+  .container ul .active {
+    background-color: $red-color;
+    color: $yello-color;
+  }
+  li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    &:not(.active):hover {
+      color: $red-color;
+    }
+  }
+  .container .selections .box {
+    overflow: hidden;
+    &::before {
+      content: attr(data-work);
+      @include data;
+    }
+    &:hover::before {
+      transform: translateX(0);
+    }
+  }
+}
+/*end our-work*/
+/*start stuff*/
+.stuff .container {
+  .main-title svg {
+    color: $yello-color;
+  }
+  .description {
+    max-width: 500px;
+  }
+}
+/*end stuff*/
+/*start team */
+.team {
+  background-color: $section-color;
+  .text h2 {
+    color: $yello-color;
+    h4 {
+      background-color: $green-color;
+    }
+  }
+}
+/*end team */
+/*start our-project  */
+.our-project {
+  background-color: $dark-color;
+}
+/*end our-project */
+/*end start subscribe */
+.subscribe {
+  background-color: $yello-color;
+  input {
+    border: 0;
+    border-bottom: 1px solid $light-color;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $light-color;
+    }
+  }
+}
+/*end subscribe */
+/* start footer */
+.footer {
+  background-color: $dark-color;
+  .container .row .links ul li a:hover {
+    color: $green-color !important;
+  }
+}
+/* end footer */

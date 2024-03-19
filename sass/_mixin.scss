@@ -1,0 +1,13 @@
+@mixin data {
+  position: absolute;
+  color: $light-color;
+  background-color: #33d1cc8a;
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transform: translatex(calc(-100% - 10px));
+  transition: 0.3s;
+}
